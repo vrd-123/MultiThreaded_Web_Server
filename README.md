@@ -2,22 +2,7 @@
 
 A Java-based web server implementation demonstrating different threading approaches for handling multiple client connections. This project includes three different server implementations: Single-threaded, Multi-threaded, and Thread Pool-based servers, designed for performance testing with JMeter.
 
-## 📁 Project Structure
-
-```
-MultithreadedWebServer/
-├── SingleThreaded/
-│   ├── Server.java
-│   └── Client.java
-├── MultiThreaded/
-│   ├── Server.java
-│   └── Client.java
-└── ThreadPool/
-    ├── Server.java
-    └── Client.java
-```
-
-## 🚀 Features
+## Features
 
 - **Single-threaded Server**: Basic server implementation that handles clients sequentially
 - **Multi-threaded Server**: Creates a new thread for each client connection
@@ -26,19 +11,19 @@ MultithreadedWebServer/
 - **Performance Testing**: Optimized for JMeter load testing with 1000 threads per second
 - **Graceful Shutdown**: All servers support graceful shutdown with Ctrl+C
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - Java Development Kit (JDK) 8 or higher
 - Apache JMeter (for load testing)
 - Basic understanding of Java networking and threading concepts
 
-## 📋 Requirements
+## Requirements
 
 - Java 8+
 - No external dependencies required (uses only Java standard library)
 - Apache JMeter 5.0+ (for performance testing)
 
-## 🏃‍♂️ How to Run
+## How to Run
 
 ### Single-Threaded Server
 
@@ -97,7 +82,7 @@ MultithreadedWebServer/
    java Client
    ```
 
-## 🔧 Implementation Details
+## Implementation Details
 
 ### Single-Threaded Server
 - **Port**: 8010
@@ -139,7 +124,7 @@ MultithreadedWebServer/
 - **Multi-threaded Client**: Creates 100 concurrent connections to test server performance
 - **Thread Pool Client**: Uses thread pool to create 100 concurrent connections
 
-## 📊 Performance Characteristics
+## Performance Characteristics
 
 | Implementation | Concurrency | Resource Usage | Scalability | JMeter Performance |
 |----------------|-------------|----------------|-------------|-------------------|
@@ -147,7 +132,7 @@ MultithreadedWebServer/
 | Multi-threaded | High | High | Good | ~500-800 TPS |
 | Thread Pool | High | Moderate | Excellent | ~800-1000+ TPS |
 
-## 🧪 Testing
+## Testing
 
 ### Manual Testing
 Each client creates multiple concurrent connections to test server performance:
@@ -217,7 +202,7 @@ Client 1 received: Hello Client! -- from the ThreadPool Server
 All clients completed.
 ```
 
-## 🔍 Key Concepts Demonstrated
+## Key Concepts Demonstrated
 
 1. **Socket Programming**: Basic client-server communication using Java sockets
 2. **Threading Models**: Different approaches to handling concurrent connections
@@ -225,45 +210,3 @@ All clients completed.
 4. **Network Programming**: TCP/IP communication fundamentals
 5. **Performance Optimization**: Thread pool configuration for high throughput
 6. **Load Testing**: JMeter integration for performance validation
-
-## 🚧 Future Enhancements
-
-- [x] Implement Thread Pool server with bounded queue
-- [x] Add graceful shutdown support
-- [x] Improve error handling and resource cleanup
-- [x] Optimize for JMeter testing
-- [ ] Add HTTP protocol support
-- [ ] Implement request/response handling
-- [ ] Add configuration file support
-- [ ] Implement logging and monitoring
-- [ ] Add unit tests
-- [ ] Performance benchmarking tools
-- [ ] Docker containerization
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👨‍💻 Author
-
-Created as a learning project for understanding multithreading concepts in Java networking applications.
-
-## 📚 Additional Resources
-
-- [Java Socket Programming](https://docs.oracle.com/javase/tutorial/networking/sockets/)
-- [Java Threading](https://docs.oracle.com/javase/tutorial/essential/concurrency/)
-- [Network Programming in Java](https://docs.oracle.com/javase/tutorial/networking/)
-- [Apache JMeter Documentation](https://jmeter.apache.org/usermanual/index.html)
-- [Thread Pool Best Practices](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ThreadPoolExecutor.html)
-
----
-
-**Note**: This project is designed for educational purposes to understand different threading approaches in server applications. The Thread Pool implementation is optimized for JMeter testing with 1000 threads per second. For production use, consider using established frameworks like Spring Boot or Netty. 
